@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IProductDal :IEntityRepository<Product> // I interface- Product Entity- Dal dataaccesslayer
+    public interface ICategoryDal : IEntityRepository<Category>
     {
         
 
