@@ -34,13 +34,13 @@ namespace Business.Concrete
 
         public IDataResult<List<Product>> GetAll()
         {
-            if (DateTime.Now.Hour==22)
+            if (DateTime.Now.Hour == 22)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
-            // iş kodları varsa
-            // yetkisi var mı?
-            // şöyle böyle kurallar varsa ve geçtiyse aşağısı çalışır
+            //// iş kodları varsa
+            //// yetkisi var mı?
+            //// şöyle böyle kurallar varsa ve geçtiyse aşağısı çalışır
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductsListed);
 
         }
